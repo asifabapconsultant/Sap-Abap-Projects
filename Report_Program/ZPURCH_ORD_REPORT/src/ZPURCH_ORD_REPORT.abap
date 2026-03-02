@@ -1,0 +1,16 @@
+REPORT ZPURCH_ORD_REPORT.
+
+TABLES: ekko,ekpo.
+
+INCLUDE zdatdecl.
+
+INCLUDE zscrn.
+
+INCLUDE ZFORMS.
+
+START-OF-SELECTION.
+
+PERFORM getdata.
+PERFORM DISPLAYdata.
+
+end-of-SELECTION.
