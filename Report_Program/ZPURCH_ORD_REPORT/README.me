@@ -1,0 +1,154 @@
+# ZPURCH_ORD_REPORT – Purchase Order Detailed ALV Report
+
+## Overview
+ZPURCH_ORD_REPORT is a custom SAP ABAP report developed to display detailed 
+Purchase Order information using ALV Grid (LVC).
+
+The report retrieves Purchase Order header, item, vendor, and schedule line 
+details from standard SAP tables and provides interactive drilldown functionality.
+
+This project demonstrates practical knowledge of:
+- ALV Reporting
+- INNER JOIN
+- Modular Programming (Includes)
+- Interactive Events
+- Hotspot Navigation
+
+
+## Program Structure
+
+ZPURCH_ORD_REPORT
+|
+|-- ZDATDECL   (Data Declarations)
+|-- ZSCRN      (Selection Screen)
+|-- ZFORMS     (Business Logic & ALV Display)
+
+
+## Tables Used
+
+EKKO  - Purchase Order Header
+EKPO  - Purchase Order Item
+LFA1  - Vendor Master
+EKET  - Schedule Lines
+
+
+## Selection Screen Fields
+
+- Purchasing Document (EBELN)
+- Created on (AEDAT)
+- Purchasing Doc.Type (BSART)
+- Created By (ERNAM)
+- Material (MATNR)
+
+
+## Main ALV Output Fields
+
+- PO Number
+- PO Date
+- Created By
+- Document Type
+- Vendor ID
+- Vendor Name
+- Line Item
+- Material Description
+- Material Number
+- Quantity
+- Unit of Measure
+- Net Price
+- Total Amount
+
+
+## Functional Features
+
+1. Hotspot Navigation
+   - PO Number is clickable.
+   - Navigates to Transaction ME23 (Display Purchase Order).
+
+2. Drilldown to Schedule Lines
+   - Double-click on row to display schedule line data.
+   - Data fetched from EKET table.
+   - Displays second ALV with:
+        * PO Number
+        * Item Number
+        * Schedule Line
+        * Delivery Date
+        * Quantity
+
+3. Report Header
+   - PURCHASE ORDER DETAILS
+   - Reporting Date
+   - Reporting Time
+   - SAP Logo
+
+
+## Technical Concepts Used
+
+- REUSE_ALV_GRID_DISPLAY_LVC
+- Field Catalog (LVC_T_FCAT)
+- Layout Handling
+- ALV Variants
+- USER_COMMAND Event
+- TOP_OF_REPORT
+- Parameter ID Navigation
+- Internal Tables
+- INNER JOIN
+- Modularization using FORM routines
+
+
+## Data Retrieval Logic
+
+INNER JOIN performed between:
+- EKKO (Header)
+- LFA1 (Vendor)
+- EKPO (Item)
+
+Filters applied from selection screen inputs.
+
+
+## How to Execute
+
+1. Go to SE38
+2. Enter Program: ZPURCH_ORD_REPORT
+3. Execute (F8)
+4. Enter selection criteria
+5. View ALV Output
+
+
+## Business Use Case
+
+- Track Purchase Orders
+- Monitor PO quantities and pricing
+- Navigate directly to PO display
+- View delivery schedule lines
+- Useful for MM and Finance teams
+
+
+## Possible Enhancements
+
+- Excel Download Option
+- Color Coding Based on Amount
+- Authorization Check
+- Convert to OO ALV
+- Performance Optimization
+
+
+## Author
+
+S MAHAMMAD ASIF
+SAP ABAP Developer
+India
+GitHub: https://github.com/ShaikAsif0548
+
+
+## Conclusion
+
+This project demonstrates strong knowledge of:
+- SAP MM Tables
+- ALV Reporting
+- Interactive Reporting
+- Modular ABAP Programming
+
+Suitable for:
+- SAP ABAP Fresher Resume
+- Interview Demonstration
+- GitHub Portfolio
