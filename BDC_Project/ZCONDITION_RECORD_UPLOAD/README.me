@@ -1,1 +1,69 @@
+# ZCONDITION_RECORD_UPLOAD
 
+## 📌 Project Description
+This project is an SAP ABAP BDC Session Method program developed to upload 
+Condition Records using Transaction VK11.
+
+The program reads data from a CSV/Excel file and creates condition records 
+for condition type K004 using batch input session.
+
+---
+
+## 🛠 Technical Details
+
+- Technology: SAP ABAP
+- Method Used: BDC Session Method
+- Transaction Code Used: VK11
+- Batch Session Monitoring: SM35
+- File Upload FM: GUI_UPLOAD
+- BDC FMs Used:
+  - BDC_OPEN_GROUP
+  - BDC_INSERT
+  - BDC_CLOSE_GROUP
+
+---
+
+## 📂 Program Structure
+
+Main Report: ZCONDITION_RECORD_UPLOAD  
+Includes:
+- ZTOP_SM (Data Declarations)
+- ZLOGIC_SM (BDC Logic & File Upload)
+
+---
+
+## 📊 Input File Format
+
+ VKORG  VTWEG  MATNR  AMOUNT 
+ 1000   10     MAT001 500    
+ 1000   10     MAT002 750    
+
+File Type: CSV (Comma Separated)
+
+---
+
+## ▶️ How to Execute
+
+1. Run transaction SE38
+2. Execute program ZCONDITION_RECORD_UPLOAD
+3. Select input file
+4. Execute program
+5. Go to SM35
+6. Process session VK11_SS
+
+---
+
+## 📸 Screenshots
+
+Screenshots are available inside the docs/screenshots folder:
+
+- Selection Screen
+- Excel Input File
+- SM35 Session Created
+- VK11 Condition Record Created
+
+---
+
+## 👨‍💻 Developed By
+S MAHAMMAD ASIF
+SAP ABAP Developer
