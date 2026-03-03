@@ -4,7 +4,8 @@ zxyz53	company	xyz53 pvt ltd	xyz53	in
 zxyz54	company	xyz54 pvt ltd	xyz54	in
 zxyz55	company	xyz55 pvt ltd	xyz55	in
 zxyz56	company	xyz56 pvt ltd	xyz56	in
-zxyz47	company	xyz47 pvt ltd	xyz47	in
+zxyz57	company	xyz57 pvt ltd	xyz57	in
 zxyz58	company	xyz58 pvt ltd	xyz58	in
 zxyz59	company	xyz59 pvt ltd	xyz59	in
+
 zxyz60	company	xyz60 pvt ltd	xyz60	in
