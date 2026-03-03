@@ -1,153 +1,153 @@
-FORM SELFILE .
+FORM selfile .
 
-CALL FUNCTION 'F4_FILENAME'
+  CALL FUNCTION 'F4_FILENAME'
 * EXPORTING
 *   PROGRAM_NAME        = SYST-CPROG
 *   DYNPRO_NUMBER       = SYST-DYNNR
 *   FIELD_NAME          = ' '
- IMPORTING
-   FILE_NAME           = IP_FILE.
-          .
+    IMPORTING
+      file_name = ip_file.
+  .
 ENDFORM.
 
 
-FORM UPLOADDATA .
+FORM uploaddata .
 
-IF IP_FILE IS NOT INITIAL.
-  CLEAR GV_FILE.
-  GV_FILE  = IP_FILE.
-CALL FUNCTION 'GUI_UPLOAD'
-  EXPORTING
-    FILENAME                      = GV_FILE
-   FILETYPE                      = 'ASC'
-   HAS_FIELD_SEPARATOR           = 'X'
-*   HEADER_LENGTH                 = 0
-*   READ_BY_LINE                  = 'X'
-*   DAT_MODE                      = ' '
-*   CODEPAGE                      = ' '
-*   IGNORE_CERR                   = ABAP_TRUE
-*   REPLACEMENT                   = '#'
-*   CHECK_BOM                     = ' '
-*   VIRUS_SCAN_PROFILE            =
-*   NO_AUTH_CHECK                 = ' '
+  IF ip_file IS NOT INITIAL.
+    CLEAR gv_file.
+    gv_file  = ip_file.
+    CALL FUNCTION 'GUI_UPLOAD'
+      EXPORTING
+        filename            = gv_file
+        filetype            = 'ASC'
+        has_field_separator = 'X'
+*       HEADER_LENGTH       = 0
+*       READ_BY_LINE        = 'X'
+*       DAT_MODE            = ' '
+*       CODEPAGE            = ' '
+*       IGNORE_CERR         = ABAP_TRUE
+*       REPLACEMENT         = '#'
+*       CHECK_BOM           = ' '
+*       VIRUS_SCAN_PROFILE  =
+*       NO_AUTH_CHECK       = ' '
 * IMPORTING
-*   FILELENGTH                    =
-*   HEADER                        =
-  TABLES
-    DATA_TAB                      = GT_VEND
+*       FILELENGTH          =
+*       HEADER              =
+      TABLES
+        data_tab            = gt_vend
 * CHANGING
-*   ISSCANPERFORMED               = ' '
+*       ISSCANPERFORMED     = ' '
 * EXCEPTIONS
-*   FILE_OPEN_ERROR               = 1
-*   FILE_READ_ERROR               = 2
-*   NO_BATCH                      = 3
-*   GUI_REFUSE_FILETRANSFER       = 4
-*   INVALID_TYPE                  = 5
-*   NO_AUTHORITY                  = 6
-*   UNKNOWN_ERROR                 = 7
-*   BAD_DATA_FORMAT               = 8
-*   HEADER_NOT_ALLOWED            = 9
-*   SEPARATOR_NOT_ALLOWED         = 10
-*   HEADER_TOO_LONG               = 11
-*   UNKNOWN_DP_ERROR              = 12
-*   ACCESS_DENIED                 = 13
-*   DP_OUT_OF_MEMORY              = 14
-*   DISK_FULL                     = 15
-*   DP_TIMEOUT                    = 16
-*   OTHERS                        = 17
-          .
-IF SY-SUBRC <> 0.
-  MESSAGE 'ERROR WHILE UPLOADING DATA' TYPE 'I'.
-ELSE.
-  CLEAR GS_VEND.
-LOOP AT GT_VEND INTO GS_VEND.
+*       FILE_OPEN_ERROR     = 1
+*       FILE_READ_ERROR     = 2
+*       NO_BATCH            = 3
+*       GUI_REFUSE_FILETRANSFER       = 4
+*       INVALID_TYPE        = 5
+*       NO_AUTHORITY        = 6
+*       UNKNOWN_ERROR       = 7
+*       BAD_DATA_FORMAT     = 8
+*       HEADER_NOT_ALLOWED  = 9
+*       SEPARATOR_NOT_ALLOWED         = 10
+*       HEADER_TOO_LONG     = 11
+*       UNKNOWN_DP_ERROR    = 12
+*       ACCESS_DENIED       = 13
+*       DP_OUT_OF_MEMORY    = 14
+*       DISK_FULL           = 15
+*       DP_TIMEOUT          = 16
+*       OTHERS              = 17
+      .
+    IF sy-subrc <> 0.
+      MESSAGE 'ERROR WHILE UPLOADING DATA' TYPE 'I'.
+    ELSE.
+      CLEAR gs_vend.
+      LOOP AT gt_vend INTO gs_vend.
 
-perform bdc_dynpro      using 'SAPMF02K' '0100'.
-perform bdc_field       using 'BDC_CURSOR'
-                              'RF02K-LIFNR'.
-perform bdc_field       using 'BDC_OKCODE'
-                              '/00'.
-perform bdc_field       using 'RF02K-LIFNR'
-                              GS_VEND-LIFNR.
-perform bdc_field       using 'RF02K-KTOKK'
-                              '0001'.
-perform bdc_dynpro      using 'SAPMF02K' '0110'.
-perform bdc_field       using 'BDC_CURSOR'
-                              'LFA1-ANRED'.
-perform bdc_field       using 'BDC_OKCODE'
-                              '/00'.
-perform bdc_field       using 'LFA1-ANRED'
-                              GS_VEND-ANRED.
-perform bdc_field       using 'LFA1-NAME1'
-                              GS_VEND-NAME1.
-perform bdc_field       using 'LFA1-SORTL'
-                              GS_VEND-SORTL.
-perform bdc_field       using 'LFA1-LAND1'
-                              GS_VEND-LAND1.
-perform bdc_dynpro      using 'SAPMF02K' '0120'.
-perform bdc_field       using 'BDC_CURSOR'
-                              'LFA1-KUNNR'.
-perform bdc_field       using 'BDC_OKCODE'
-                              '/00'.
-perform bdc_dynpro      using 'SAPMF02K' '0130'.
-perform bdc_field       using 'BDC_CURSOR'
-                              'LFBK-BANKS(01)'.
-perform bdc_field       using 'BDC_OKCODE'
-                              '=ENTR'.
-perform bdc_dynpro      using 'SAPMF02K' '0380'.
-perform bdc_field       using 'BDC_CURSOR'
-                              'KNVK-NAMEV(01)'.
-perform bdc_field       using 'BDC_OKCODE'
-                              '=ENTR'.
-perform bdc_transaction using 'XK01'.
+        PERFORM bdc_dynpro      USING 'SAPMF02K' '0100'.
+        PERFORM bdc_field       USING 'BDC_CURSOR'
+                                      'RF02K-LIFNR'.
+        PERFORM bdc_field       USING 'BDC_OKCODE'
+                                      '/00'.
+        PERFORM bdc_field       USING 'RF02K-LIFNR'
+                                      gs_vend-lifnr.
+        PERFORM bdc_field       USING 'RF02K-KTOKK'
+                                      '0001'.
+        PERFORM bdc_dynpro      USING 'SAPMF02K' '0110'.
+        PERFORM bdc_field       USING 'BDC_CURSOR'
+                                      'LFA1-ANRED'.
+        PERFORM bdc_field       USING 'BDC_OKCODE'
+                                      '/00'.
+        PERFORM bdc_field       USING 'LFA1-ANRED'
+                                      gs_vend-anred.
+        PERFORM bdc_field       USING 'LFA1-NAME1'
+                                      gs_vend-name1.
+        PERFORM bdc_field       USING 'LFA1-SORTL'
+                                      gs_vend-sortl.
+        PERFORM bdc_field       USING 'LFA1-LAND1'
+                                      gs_vend-land1.
+        PERFORM bdc_dynpro      USING 'SAPMF02K' '0120'.
+        PERFORM bdc_field       USING 'BDC_CURSOR'
+                                      'LFA1-KUNNR'.
+        PERFORM bdc_field       USING 'BDC_OKCODE'
+                                      '/00'.
+        PERFORM bdc_dynpro      USING 'SAPMF02K' '0130'.
+        PERFORM bdc_field       USING 'BDC_CURSOR'
+                                      'LFBK-BANKS(01)'.
+        PERFORM bdc_field       USING 'BDC_OKCODE'
+                                      '=ENTR'.
+        PERFORM bdc_dynpro      USING 'SAPMF02K' '0380'.
+        PERFORM bdc_field       USING 'BDC_CURSOR'
+                                      'KNVK-NAMEV(01)'.
+        PERFORM bdc_field       USING 'BDC_OKCODE'
+                                      '=ENTR'.
+        PERFORM bdc_transaction USING 'XK01'.
 
-CLEAR: GS_VEND,BDCDATA[].
-ENDLOOP.
+        CLEAR: gs_vend,bdcdata[].
+      ENDLOOP.
 
-LOOP AT MESSTAB.
-  DATA: LV_ID TYPE STRING,
-        LV_MSG TYPE STRING.
-  LV_ID = MESSTAB-MSGV1.
-  IF MESSTAB-MSGTYP EQ 'S'.
-    CLEAR LV_MSG.
-    CONCATENATE 'VENDOR' LV_ID 'SUCCESFULLY CREATED' INTO LV_MSG SEPARATED BY SPACE.
-    WRITE:/ LV_MSG COLOR 5 INVERSE.
+      LOOP AT messtab.
+        DATA: lv_id TYPE string,
+              lv_msg TYPE string.
+        lv_id = messtab-msgv1.
+        IF messtab-msgtyp EQ 'S'.
+          CLEAR lv_msg.
+          CONCATENATE 'VENDOR' lv_id 'SUCCESFULLY CREATED' INTO lv_msg SEPARATED BY space.
+          WRITE:/ lv_msg COLOR 5 INVERSE.
+        ENDIF.
+
+        IF messtab-msgtyp EQ 'E'.
+          CLEAR lv_msg.
+          CONCATENATE 'ERROR WHILE CREATING' lv_id INTO lv_msg SEPARATED BY space.
+          WRITE:/ lv_msg COLOR 6 INVERSE.
+        ENDIF.
+        CLEAR bdcdata.
+      ENDLOOP.
+    ENDIF.
   ENDIF.
-
-  IF MESSTAB-MSGTYP EQ 'E'.
-    CLEAR LV_MSG.
-    CONCATENATE 'ERROR WHILE CREATING' LV_ID INTO LV_MSG SEPARATED BY SPACE.
-    WRITE:/ LV_MSG COLOR 6 INVERSE.
-  ENDIF.
-CLEAR BDCDATA.
-ENDLOOP.
-ENDIF.
-ENDIF.
 ENDFORM.                    " UPLOADDATA
 
 
-FORM BDC_DYNPRO  USING  PROGRAM DYNPRO.
-  CLEAR BDCDATA.
-  BDCDATA-PROGRAM  = PROGRAM.
-  BDCDATA-DYNPRO   = DYNPRO.
-  BDCDATA-DYNBEGIN = 'X'.
-  APPEND BDCDATA.
+FORM bdc_dynpro  USING  program dynpro.
+  CLEAR bdcdata.
+  bdcdata-program  = program.
+  bdcdata-dynpro   = dynpro.
+  bdcdata-dynbegin = 'X'.
+  APPEND bdcdata.
 ENDFORM.                    " BDC_DYNPRO
 
 
-FORM BDC_FIELD  USING  FNAM FVAL.
-  IF FVAL <> SPACE.
-    CLEAR BDCDATA.
-    BDCDATA-FNAM = FNAM.
-    BDCDATA-FVAL = FVAL.
-    APPEND BDCDATA.
+FORM bdc_field  USING  fnam fval.
+  IF fval <> space.
+    CLEAR bdcdata.
+    bdcdata-fnam = fnam.
+    bdcdata-fval = fval.
+    APPEND bdcdata.
   ENDIF.
 ENDFORM.                    " BDC_FIELD
 
 
-FORM BDC_TRANSACTION  USING  TCODE.
-CALL TRANSACTION TCODE USING BDCDATA
-                        MODE DISMODE
-                        UPDATE 'A'
-                        MESSAGES INTO MESSTAB.
+FORM bdc_transaction  USING  tcode.
+  CALL TRANSACTION tcode USING bdcdata
+                          MODE dismode
+                          UPDATE 'A'
+                          MESSAGES INTO messtab.
 ENDFORM.                    " BDC_TRANSACTION
