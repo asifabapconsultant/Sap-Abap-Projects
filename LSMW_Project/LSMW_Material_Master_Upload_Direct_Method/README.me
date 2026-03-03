@@ -43,43 +43,34 @@ Manual creation using Transaction Code MM01 was time-consuming.
 
 📸 Screenshot: Screenshots/02_Maintain_Object_Attributes.png
 
----
 
 ### 3️⃣ Maintained Source Structures
 Defined source structure as:
-- HEADER
-- PLANT
-- STORAGE_LOCATION
+BASIC
 
 📸 Screenshot: Screenshots/03_Source_Structure.png
 
----
 
 ### 4️⃣ Maintain Source Fields
 Example Fields:
-- MATNR
-- MTART
-- MBRT
-- MEINS
-- MAKTX
-- WERKS
-- LGORT
+MBRSH
+MTART
+MAKTX
+MEINS
+MATKL
 
----
 
 ### 5️⃣ Maintained Field Mapping & Conversion Rules
 Map source fields to SAP fields using direct mapping or fixed values.
 
 📸 Screenshot: Screenshots/04_Field_Mapping.png
 
----
 
 ### 6️⃣ Specify Files
 Upload input file (converted .txt file)
 
 📸 Screenshot: Screenshots/05_Convert_Data.png
 
----
 
 ### 7️⃣ Execute Conversion & Create Batch Input Session
 
@@ -89,7 +80,6 @@ Upload input file (converted .txt file)
 
 📸 Screenshot: Screenshots/06_Batch_Input_Session.png
 
----
 
 ## 📊 Sample Input Data Format
 
@@ -98,12 +88,10 @@ Upload input file (converted .txt file)
  MAT1001 FERT   M     EA     Finished Bolt   1000   0001  
  MAT1002 ROH    M     KG     Raw Steel       1000   0001  
 
----
 
 ## ✅ Result
 Material master records successfully created using Direct Input Method without manual MM01 entry.
 
----
 
 ## 📌 Advantages
 - Faster mass upload
