@@ -23,15 +23,16 @@ Client required mass upload of Material Master data including:
 - Base Unit of Measure
 - Material Description
 - Material Group
+- Plant
 Manual creation using Transaction Code MM01 was time-consuming.
 
 
 ## ⚙️ LSMW Configuration Steps
 ### 1️⃣ Create Project
 - Transaction Code: LSMW
-- Project: Z_MAT_UPLOAD
-- Subproject: DIRECT_METHOD
-- Object: MATERIAL_MASTER
+- Project: ZMAT
+- Subproject: DM
+- Object: MM
 
 📸 Screenshot: Attach in Screenshots/01_Project_Creation.png
 
@@ -57,6 +58,7 @@ MTART
 MAKTX
 MEINS
 MATKL
+WERKS
 
 
 ### 5️⃣ Maintained Field Mapping & Conversion Rules
