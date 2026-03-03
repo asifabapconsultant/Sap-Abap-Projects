@@ -1,52 +1,54 @@
 TYPES: BEGIN OF ty_list,
-    SEL,
-  EBELN TYPE EKKO-EBELN,
-  BSART TYPE EKKO-BSART,
-  AEDAT TYPE EKKO-AEDAT,
-  ERNAM TYPE EKKO-ERNAM,
-  LIFNR TYPE EKKO-LIFNR,
-  NAME1 TYPE LFA1-NAME1,
-  EBELP TYPE EKPO-EBELP,
-  TXZ01 TYPE EKPO-TXZ01,
-  MATNR TYPE EKPO-MATNR,
-  MENGE TYPE EKPO-MENGE,
-  MEINS TYPE EKPO-MEINS,
-  NETPR TYPE EKPO-NETPR,
-  NETWR TYPE EKPO-NETWR,
-  R_COLOUR(4),
+
+    sel,
+  ebeln TYPE ekko-ebeln,
+  bsart TYPE ekko-bsart,
+  aedat TYPE ekko-aedat,
+  ernam TYPE ekko-ernam,
+  lifnr TYPE ekko-lifnr,
+  name1 TYPE lfa1-name1,
+  ebelp TYPE ekpo-ebelp,
+  txz01 TYPE ekpo-txz01,
+  matnr TYPE ekpo-matnr,
+  menge TYPE ekpo-menge,
+  meins TYPE ekpo-meins,
+  netpr TYPE ekpo-netpr,
+  netwr TYPE ekpo-netwr,
+  r_colour(4),
+
 END OF ty_list.
 
 DATA: gt_list TYPE STANDARD TABLE OF ty_list,
       gs_list TYPE ty_list.
 
-data : gt_fcat type lvc_t_fcat,
-         gs_fcat like LINE OF gt_fcat,
-         gs_layout type lvc_s_layo,
-         gs_variant type disvariant,
-         gs_grid type lvc_s_glay,
-         gv_cnt type i.
+DATA : gt_fcat TYPE lvc_t_fcat,
+       gs_fcat LIKE LINE OF gt_fcat,
+       gs_layout TYPE lvc_s_layo,
+       gs_variant TYPE disvariant,
+       gs_grid TYPE lvc_s_glay,
+       gv_cnt TYPE i.
 
 
-TYPES: BEGIN OF TY_EKET,
-EBELN	TYPE EBELN,
-EBELP	TYPE EBELP,
-ETENR	TYPE EETEN,
-EINDT	TYPE EINDT,
-MENGE	TYPE ETMEN,
-END OF TY_EKET.
+TYPES: BEGIN OF ty_eket,
+ebeln	TYPE ebeln,
+ebelp	TYPE ebelp,
+etenr	TYPE eeten,
+eindt	TYPE eindt,
+menge	TYPE etmen,
+END OF ty_eket.
 
 
-DATA: GT_EKET TYPE STANDARD TABLE OF TY_EKET,
-      GS_EKET TYPE TY_EKET.
+DATA: gt_eket TYPE STANDARD TABLE OF ty_eket,
+      gs_eket TYPE ty_eket.
 
-data : gt_fcat1 type lvc_t_fcat,
-       gs_fcat1 like LINE OF gt_fcat,
-       gs_layout1 type lvc_s_layo,
-       gs_variant1 type disvariant,
-       gs_grid1 type lvc_s_glay,
-       gv_cnt1 type i.
+DATA : gt_fcat1 TYPE lvc_t_fcat,
+        gs_fcat1 LIKE LINE OF gt_fcat,
+          gs_layout1 TYPE lvc_s_layo,
+            gs_variant1 TYPE disvariant,
+            gs_grid1 TYPE lvc_s_glay,
+             gv_cnt1 TYPE i.
 
 DATA: gt_header TYPE slis_t_listheader,
       gs_header TYPE slis_listheader,
-      Rdate TYPE DATUM,
-      Rtime TYPE UZEIT.
+      rdate TYPE datum,
+      rtime TYPE uzeit.
