@@ -22,8 +22,7 @@ Client required mass upload of Material Master data including:
 - Industry Sector
 - Base Unit of Measure
 - Material Description
-- Plant Data
-- Storage Location Data
+- Material Group
 Manual creation using Transaction Code MM01 was time-consuming.
 
 
@@ -83,10 +82,10 @@ Upload input file (converted .txt file)
 
 ## 📊 Sample Input Data Format
 
- MATNR   MTART  MBRT  MEINS  MAKTX           WERKS  LGORT 
-----------------------------------------------------------
- MAT1001 FERT   M     EA     Finished Bolt   1000   0001  
- MAT1002 ROH    M     KG     Raw Steel       1000   0001  
+ MATNR   MTART  MBRT  MEINS  MAKTX           MATKL
+--------------------------------------------------
+ MAT1001 FERT   M     EA     Finished Bolt   0212
+ MAT1002 ROH    M     KG     Raw Steel       001
 
 
 ## ✅ Result
