@@ -11,7 +11,7 @@ The objective of this project is to mass upload material master records efficien
 - SAP ECC
 - LSMW (Transaction Code: LSMW)
 - Direct Input Method
-- Object: 0001 – Material Master
+- Object: 00020 – Material Master
 - Program: RMDATIND
 - Input File: Excel (.xls converted to .txt)
 
@@ -39,7 +39,7 @@ Manual creation using Transaction Code MM01 was time-consuming.
 ![Project Creation](Screenshots/01_project_creation.png)
 
 ### 2️⃣ Maintained Object Attributes
-- Object: 0001 – Material Master
+- Object: 0020 – Material Master
 - Method: Direct Input
 - Program: RMDATIND
 
