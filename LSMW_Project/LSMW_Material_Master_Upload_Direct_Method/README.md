@@ -66,7 +66,7 @@ WERKS
 ### 5️⃣ Maintained Field Mapping & Conversion Rules
 Mapped source fields to SAP fields using direct mapping or fixed values.
 
-📸 Screenshot: Screenshots/04_Field_Mapping.png
+ ![Field_mapping](Screenshots/04_field_mapping.png)
 
 
 ### 6️⃣ Specify Files
