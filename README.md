@@ -27,8 +27,9 @@ System: SAP ECC 6.0
 - LSMW
 - Smartforms
 - WE19 / WE20
+- CMOD
+- SE19
 
----
 
 ## 🎯 Objective
 
