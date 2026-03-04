@@ -79,7 +79,7 @@ Uploaded input file (converted .txt file)
 
 - Converted Data
 
-📸 Screenshot: Screenshots/06_Batch_Input_Session.png
+📸 ![success_status](Screenshots/01_success_status.png)
 
 
 ## 📊 Sample Input Data Format
