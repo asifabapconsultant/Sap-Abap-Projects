@@ -43,7 +43,7 @@ Manual creation using Transaction Code MM01 was time-consuming.
 - Method: Direct Input
 - Program: RMDATIND
 
-📸 Screenshot: Screenshots/02_Object_Attributes.png
+![Object_attributes](Screenshots/02_object_attributes.png)
 
 
 ### 3️⃣ Maintained Source Structures
