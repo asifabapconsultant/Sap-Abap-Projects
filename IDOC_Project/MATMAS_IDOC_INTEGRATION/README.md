@@ -39,7 +39,7 @@ The business requires automatic synchronization of Material Master data between 
 ### 1️⃣ Logical System Creation
 Transaction Code: `BD54`
 
-![define_logical_system](screenshots/define_logical_systems.png)
+![define_logical_system](screenshots/define_logical_system.png)
 
 
 ### 2️⃣ Assign Logical System to Client
