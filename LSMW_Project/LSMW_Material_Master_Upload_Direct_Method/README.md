@@ -55,12 +55,7 @@ BASIC
 
 ### 4️⃣ Maintain Source Fields
 Example Fields:
-MBRSH
-MTART
-MAKTX
-MEINS
-MATKL
-WERKS
+ ![maintain_source_field](Screenshots/10_maintain_source_field.png)
 
 
 ### 5️⃣ Maintained Field Mapping & Conversion Rules
