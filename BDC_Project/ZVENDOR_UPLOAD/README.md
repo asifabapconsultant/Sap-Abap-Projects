@@ -83,24 +83,16 @@ N → Background Processing
 
 ## 📸 Screenshots
 
-Add screenshots inside the folder:
+Added screenshots inside the folder:
 
 screenshots/
 
-Recommended Screenshots:
 - Selection_Screen.png
 - Input_File_Format.png
 - SHDB_Recording_XK01.png
 - Successful_Vendor_Creation.png
 - Error_Log_Output.png
 
-To display image in README:
-
-```markdown
-![Selection Screen](screenshots/Selection_Screen.png)
-```
-
----
 
 ## ⚙️ Execution Steps
 
