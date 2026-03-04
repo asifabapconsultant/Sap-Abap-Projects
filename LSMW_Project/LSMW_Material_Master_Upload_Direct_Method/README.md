@@ -79,7 +79,7 @@ Uploaded input file (converted .txt file)
 
 - Converted Data
 
-![success_status](Screenshots/07_success_status.png)
+![success_status](Screenshots/07_succes_status.png)
 
 
 ## 📊 Sample Input Data Format
