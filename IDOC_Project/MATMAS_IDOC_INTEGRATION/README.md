@@ -30,7 +30,7 @@ The business requires automatic synchronization of Material Master data between 
 | Basic Type      | MATMAS05    |
 | Process Code    | MATM        |
 | IDoc Direction  | Outbound & Inbound |
-| IDoc Tool       | ALE / EDI   |
+| IDoc Tool       | ALE         |
 
 ---
 
