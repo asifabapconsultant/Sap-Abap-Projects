@@ -92,6 +92,5 @@ Material master records successfully created using Direct Input Method without m
 ---
 
 ## 👨‍💻 Author
-S MAHAMMAD ASIF
-
+S MAHAMMAD ASIF     
 SAP ABAP Consultant
