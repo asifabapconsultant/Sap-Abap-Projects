@@ -38,13 +38,13 @@ The solution includes:
 
 ## 📸 Screenshots
 ### 1️⃣ Selection Screen
-![Selection Screen](Screenshots/04_selection_Screen.png)
+![Selection Screen](Screenshots/04_selection_screen.png)
 ### 2️⃣ SmartForm Layout
-![Layout](Screenshots/01_smartform_Layout.png)
+![Layout](Screenshots/01_smartform_layout.png)
 ### 3️⃣ Driver Program Code
-![Code](Screenshots/03_driver_Program_Code.png)
+![Code](Screenshots/03_driver_program_Code.png)
 ### 4️⃣ Output Preview
-![Output](Screenshots/05_print_Preview.png)
+![Output](Screenshots/05_print_preview.png)
 
 ## 🚀 How to Execute
 1. Go to SE38
