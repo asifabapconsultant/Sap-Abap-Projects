@@ -39,29 +39,29 @@ The business requires automatic synchronization of Material Master data between 
 ### 1️⃣ Logical System Creation
 Transaction Code: `BD54`
 
-![define_logical_system](Screenshots/define_logical_systems.png)
+![define_logical_system](screenshots/define_logical_systems.png)
 
 
 ### 2️⃣ Assign Logical System to Client
 Transaction Code: `SCC4`
-![assign_system](Screenshots/assigning_logical_systems.png)
+![assign_system](screenshots/assigning_logical_systems.png)
 
 ---
 
 ### 3️⃣ RFC Destination Configuration
 Transaction Code: `SM59`
-![connection_test](Screenshots/connection_test.png)
+![connection_test](screenshots/connection_test.png)
 
 ---
 
 ### 4️⃣ Distribution Model Configuration
 Transaction Code: `BD64`
-![distribution_model](Screenshots/distribution_model.png)
+![distribution_model](screenshots/distribution_model.png)
 
 
 ### 5️⃣ Partner Profile Configuration
 Transaction Code: `WE20`
-![partner_profiles](Screenshots/partner_profiles.png)
+![partner_profiles](screenshots/partner_profiles.png)
 
 ## 📂 IDoc Monitoring
 
@@ -77,7 +77,7 @@ Check IDoc status:
 | 53          | Successfully Posted |
 | 51          | Error in Application |
 
-![idoc_display](Screenshots/idoc_display.png)
+![idoc_display](screenshots/idoc_display.png)
 
 ## 🧪 Testing Procedure
 
