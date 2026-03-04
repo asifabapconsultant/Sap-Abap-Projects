@@ -60,7 +60,7 @@ Screenshots are available inside the screenshots folder:
 
 screenshots/
 - Selection Screen
-- flat Input File
+- Input File
 - SM35 Session Created
 - VK11 Condition Record Created
 
