@@ -42,7 +42,7 @@ The solution includes:
 ### 2️⃣ SmartForm Layout
 ![Layout](Screenshots/01_smartform_layout.png)
 ### 3️⃣ Driver Program Code
-![Code](Screenshots/03_driver_program_Code.png)
+![Code](Screenshots/03_driver_program_screen.png)
 ### 4️⃣ Output Preview
 ![Output](Screenshots/05_print_preview.png)
 
