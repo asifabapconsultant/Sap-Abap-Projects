@@ -35,6 +35,7 @@ Includes:
 ## 📊 Input File Format
 
  VKORG  VTWEG  MATNR  AMOUNT 
+ 
  1000   10     MAT001 500    
  1000   10     MAT002 750    
 
@@ -57,8 +58,9 @@ File Type: .txt
 
 Screenshots are available inside the screenshots folder:
 
+screenshots/
 - Selection Screen
-- Excel Input File
+- flat Input File
 - SM35 Session Created
 - VK11 Condition Record Created
 
