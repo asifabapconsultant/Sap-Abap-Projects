@@ -2,10 +2,12 @@
 ZVENDOR_UPLOAD – SAP BDC (Call Transaction Method)
 
 📖 Project Description
+
 This project demonstrates Vendor Master creation using BDC Call Transaction Method in SAP ABAP.
 The program uploads vendor data from a flat file and creates vendors using transaction XK01.
 
 🎯 Objective
+
 To automate vendor master creation by:
 Uploading vendor data from a file
 Processing data using BDC
