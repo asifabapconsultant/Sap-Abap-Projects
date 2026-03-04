@@ -72,7 +72,7 @@ Mapped source fields to SAP fields using direct mapping or fixed values.
 ### 6️⃣ Specify Files
 Uploaded input file (converted .txt file)
 
-📸 Screenshot: Screenshots/05_Converted_Data.png
+![specify_files](Screenshots/specify_files.png)
 
 
 ### 7️⃣ Execute Conversion & Create Batch Input Session
