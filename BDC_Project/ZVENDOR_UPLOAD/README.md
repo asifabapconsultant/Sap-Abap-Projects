@@ -120,25 +120,4 @@ screenshots/
 ## 👨‍💻 Author
 
 Your Name  
-SAP ABAP Developer
-
----
-
-## 📄 Repository Structure
-
-ZVENDOR_UPLOAD/
-│
-├── src/
-│   ├── ZVENDOR_UPLOAD.abap
-│   ├── ZTOP.abap
-│   ├── ZPRGMLOGIC.abap
-│
-├── documentation/
-│   ├── Functional_Specification.pdf
-│   ├── Technical_Specification.pdf
-│
-├── screenshots/
-│
-├── sample_data/
-│
-└── README.md
+SAP ABAP Consultant
