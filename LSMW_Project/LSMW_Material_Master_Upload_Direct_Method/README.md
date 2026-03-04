@@ -49,8 +49,7 @@ Manual creation using Transaction Code MM01 was time-consuming.
 ### 3️⃣ Maintained Source Structures
 Defined source structure as:
 BASIC
-
-📸 Screenshot: Screenshots/03_Source_Structure.png
+![source_structure](Screenshots/03_source_structure.png)
 
 
 ### 4️⃣ Maintain Source Fields
