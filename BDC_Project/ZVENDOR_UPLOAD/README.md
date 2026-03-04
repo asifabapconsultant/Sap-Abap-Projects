@@ -142,9 +142,3 @@ ZVENDOR_UPLOAD/
 ├── sample_data/
 │
 └── README.md
-
----
-
-## 📌 GitHub Description (Short)
-
-SAP ABAP BDC Project – Vendor Master Upload using Call Transaction Method (XK01) with file upload and message handling. 
