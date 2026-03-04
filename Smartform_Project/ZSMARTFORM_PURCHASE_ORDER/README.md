@@ -20,7 +20,7 @@ The solution includes:
  Object Type       Object Name 
 -------------------------
  SmartForm        : ZSMARTFORM_PURCHASE_ORDER
- Driver Program   : ZSMARTFRM_DRIVER_PROGRAM 
+ Driver Program   : ZSMARTFORM_DRIVER_PROGRAM 
  Tables Used      : EKKO, EKPO, LFA1
 
 ## ⚙️ Functional Overview
@@ -48,7 +48,7 @@ The solution includes:
 
 ## 🚀 How to Execute
 1. Go to SE38
-2. Execute program ZPO_SMARTFORM_DRIVER
+2. Execute program ZSMARTFORM_DRIVER_PROGRAM
 3. Enter Purchase Order Number
 4. Click Execute
 
