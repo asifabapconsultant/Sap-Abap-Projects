@@ -29,6 +29,7 @@ System: SAP ECC 6.0
 - WE19 / WE20
 - CMOD
 - SE19
+- SEGW
 
 
 ## 🎯 Objective
