@@ -77,12 +77,6 @@ Uploaded input file (converted .txt file)
 ![success_status](Screenshots/07_succes_status.png)
 
 
-## 📊 Sample Input Data Format
-
- MATNR   MTART  MBRT  MEINS  MAKTX           MATKL
---------------------------------------------------
- MAT1001 FERT   M     EA     Finished Bolt   0212
- MAT1002 ROH    M     KG     Raw Steel       001
 
 
 ## ✅ Result
