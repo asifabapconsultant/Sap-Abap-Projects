@@ -75,7 +75,7 @@ Uploaded input file (converted .txt file)
 ![specify_files](Screenshots/09_specify_files.png)
 
 
-### 7️⃣ Execute Conversion & Create Batch Input Session
+### 7️⃣ Start Direct Input Program
 
 - Converted Data
 
