@@ -1,1 +1,1 @@
-SAP BDC (Call transaction and Session method) Projects 
+SAP BDC Projects (Call transaction and Session method)  
