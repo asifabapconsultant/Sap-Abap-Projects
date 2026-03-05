@@ -63,8 +63,7 @@ ENDMETHOD.
 
 ## 📸 Screenshots Location
 
-Placed screenshots inside:
-screenshots/
+Placed screenshots inside: /screenshots/
 Screenshots:
 1. BAdI Definition Screen (SE18)
 2. Implementation Creation (SE19)
