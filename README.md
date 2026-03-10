@@ -3,7 +3,7 @@
 ## 👨‍💻 SAP ABAP Consultant.    
 Name: S MAHAMMAD ASIF     
 Module: SAP ABAP  
-System: SAP ECC 6.0  
+System: SAP S/Hana 
 
 ---
 
