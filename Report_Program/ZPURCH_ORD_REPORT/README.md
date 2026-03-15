@@ -112,6 +112,7 @@ Filters applied from selection screen inputs.
 3. Execute (F8)
 4. Enter selection criteria
 5. View ALV Output
+   [ALV OUTPUT](Screenshots/03_Alv_Output.png)
 
 
 ## Business Use Case
