@@ -110,8 +110,10 @@ Filters applied from selection screen inputs.
 1. Go to SE38
 2. Enter Program: ZPURCH_ORD_REPORT
 3. Execute (F8)
-4. Enter selection criteria
-5. View ALV Output
+![program screen](Screenshots/01_program_screen.png)
+5. Enter selection criteria
+   ![Selection Screen](Screenshots/02_Selection_Screen.png)
+6. View ALV Output
 ![Alv_Output](Screenshots/03_ALV_Output.png)
 
 
