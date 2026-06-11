@@ -105,7 +105,7 @@ FORM uploaddata .
       ENDLOOP.
 
       LOOP AT messtab.
-        DATA: lv_id TYPE string,
+        DATA: lv_id  TYPE string,
               lv_msg TYPE string.
         lv_id = messtab-msgv1.
         IF messtab-msgtyp EQ 'S'.
