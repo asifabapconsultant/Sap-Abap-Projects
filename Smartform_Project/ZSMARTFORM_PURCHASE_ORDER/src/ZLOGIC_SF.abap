@@ -47,7 +47,7 @@ FORM print_purch_order .
         user_canceled      = 4
         OTHERS             = 5.
     IF sy-subrc <> 0.
-      DATA: lv_msg TYPE string,
+      DATA: lv_msg   TYPE string,
             lv_ebeln TYPE string.
       lv_ebeln = p_ebeln.
       CONCATENATE 'NO PURCHASE EXHIST FOR' lv_ebeln INTO lv_msg SEPARATED BY space.
