@@ -1,0 +1,4 @@
+@EndUserText.label: 'Service Defination'
+define service Zsd_empdata48 {
+  expose zc_empdata48;
+}
