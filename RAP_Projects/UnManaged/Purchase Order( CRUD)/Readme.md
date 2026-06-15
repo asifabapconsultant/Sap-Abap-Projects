@@ -72,5 +72,4 @@ Database Tables
 ## Author
 S Mohammad Asif
 SAP ABAP Developer
-Mohammad Asif
-SAP ABAP Developer
+
