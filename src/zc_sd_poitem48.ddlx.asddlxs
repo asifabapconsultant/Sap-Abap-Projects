@@ -1,0 +1,34 @@
+@Metadata.layer: #CORE
+@UI.headerInfo: {
+                title:{ value: 'Posnr',
+                label: 'Sales Document' },
+                typeName: 'So Items',
+                typeNamePlural: 'So Items'
+                }
+annotate entity zc_sd_poitem48 with
+{
+  @UI.facet: [{ id: 'Items',
+                label: 'Item',
+                type: #IDENTIFICATION_REFERENCE,
+                purpose: #STANDARD,
+                position: 10
+
+               }]
+  @EndUserText.label: 'Purchase Document No'
+  @UI.lineItem: [{ position: 10 }]
+  @UI.identification: [{ position: 10 }]
+  vbeln;
+  @EndUserText.label: 'Sales document No'
+  @UI.lineItem: [{ position: 20 }]
+  @UI.identification: [{ position: 20 }]
+  posnr;
+  @EndUserText.label: 'Material'
+  @UI.lineItem: [{ position: 30 }]
+  @UI.identification: [{ position: 30 }]
+  matnr;
+  @EndUserText.label: 'Material type'
+  @UI.lineItem: [{ position: 40 }]
+  @UI.identification: [{ position: 40 }]
+  matkl;
+
+}
