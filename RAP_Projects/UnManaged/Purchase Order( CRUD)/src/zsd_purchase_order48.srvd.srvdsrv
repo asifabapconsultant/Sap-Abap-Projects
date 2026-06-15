@@ -1,0 +1,5 @@
+@EndUserText.label: 'service defination'
+define service Zsd_purchase_order48 {
+  expose zc_sd_poheader48;
+  expose zc_sd_poitem48;
+}
