@@ -1,0 +1,76 @@
+
+@Metadata.layer: #CORE
+@Search.searchable: true
+@UI.headerInfo: { typeName: 'Purchase',
+                  typeNamePlural: 'Purchases',
+                  title: { label: 'Purchase order',
+                  value: 'vbeln' }
+                }
+annotate entity zc_sd_poheader48 with
+{
+
+
+  @UI.facet: [
+  { id: 'Header',
+                purpose: #STANDARD,
+                label: 'Purchase order header',
+                 position: 10,
+                 type: #IDENTIFICATION_REFERENCE
+
+                   },
+
+                 {
+                 id: 'item',
+                 position: 20,
+                 type: #LINEITEM_REFERENCE,
+                 targetElement: '_item',
+                 label: 'Item'
+
+                 }
+                 ]
+
+  @EndUserText.label: 'Purchase Document No'
+  @UI.lineItem: [{ position: 10 }]
+  @UI.identification: [{ position: 10 }]
+  @UI.selectionField: [{ position: 10 }]
+  @Consumption.valueHelpDefinition: [{ entity: { name: 'zvbeln_sh48', element: 'vbeln' } }]
+  @Search.defaultSearchElement: true
+  @Search.fuzzinessThreshold:0.8
+  vbeln;
+  @EndUserText.label: 'Purchase Date'
+  @UI.lineItem: [{ position: 20 }]
+  @UI.identification: [{ position: 20 }]
+  erdat;
+  @EndUserText.label: 'Buyer name'
+  @UI.lineItem: [{ position: 30 }]
+  @UI.identification: [{ position: 30 }]
+  ernam;
+  @EndUserText.label: 'Document type'
+  @UI.lineItem: [{ position: 40 }]
+  @UI.identification: [{ position: 40 }]
+  auart;
+  @EndUserText.label: 'Net amount'
+  @UI.lineItem: [{ position: 50 }]
+  @UI.identification: [{ position: 50 }]
+  netwr;
+  @EndUserText.label: 'Currency'
+  @UI.lineItem: [{ position: 60 }]
+  @UI.identification: [{ position: 60 }]
+  waerk;
+  @EndUserText.label: 'Sales organisation'
+  @UI.lineItem: [{ position: 70 }]
+  @UI.identification: [{ position: 70 }]
+  @Consumption.valueHelpDefinition: [{ entity: { name: 'zvkorg_dd48', element: 'vkorg' } }]
+  @UI.selectionField: [{ position: 20 }]
+  @Search.defaultSearchElement: true
+  @Search.fuzzinessThreshold: 0.8
+  vkorg;
+  @EndUserText.label: 'Distribution channel'
+  @UI.lineItem: [{ position: 80 }]
+  @UI.identification: [{ position: 80 }]
+  vtweg;
+  @EndUserText.label: 'division'
+  @UI.lineItem: [{ position: 90 }]
+  @UI.identification: [{ position: 90 }]
+  spart;
+}
